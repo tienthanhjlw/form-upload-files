@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
+
 import { AppComponent } from './app.component';
+import { MainUploadComponent } from './main-upload/main-upload.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainUploadComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
