@@ -1,11 +1,39 @@
 <div class="main-page-upload">
-  <h1 class="text-white">Hello</h1>
+  <h1 class="text-white p-2 text-center">Upload File</h1>
   <div class="container-form-upload d-flex">
     <div class="w-50 bg-color-mediumpurple">
       <div class="upload-text-label text-center fw-bold">Upload Excel</div>
+      <div class="p-3 text-center">
+        <input class="text-white"
+          type="file"
+          class="file-input"
+          (change)="onFileSelected($event)"
+        />
+        <div class="pt-2">
+          <button type="button" class="btn btn-primary" [disabled]="!file"
+           (click)="onClickUploadFile()">
+            Upload File
+          </button>
+        </div>
+      </div>
     </div>
     <div class="w-50 bg-color-cornflowerblue">
-      <div class="upload-text-label text-center fw-bold">Upload Excel Config</div>
+      <div class="upload-text-label text-center fw-bold">
+        Upload Excel Config
+      </div>
+      <div class="p-3 text-center">
+        <input class="text-white"
+          type="file"
+          class="file-input"
+          (change)="onFileSelected($event, 2)"
+        />
+        <div class="pt-2">
+          <button type="button" class="btn btn-primary" [disabled]="!fileConfig"
+            (click)="onClickUploadFileConfig()">
+            Upload File
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

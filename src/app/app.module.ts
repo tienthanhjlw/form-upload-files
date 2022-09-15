@@ -7,6 +7,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { AppComponent } from './app.component';
 import { MainUploadComponent } from './main-upload/main-upload.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MainUploadComponent } from './main-upload/main-upload.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ButtonsModule.forRoot()
   ],
   providers: [],
